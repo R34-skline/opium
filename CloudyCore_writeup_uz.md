@@ -60,7 +60,7 @@ Ushbu challenge’da bizga **ikkita** buffer muhim:
 Challenge tavsifida “oddiy XOR” deyilgan, demak:
 - ciphertext’ni `k3y!` (takrorlanadigan) bilan XOR qilamiz.
 
-XORdan keyin natija boshida `0x78 0x9c` chiqadi — bu odatda **zlib** stream header’iga mos keladi.
+XORdan keyin natija boshida `0x78 0x9c` chiqadi — bu odatda **zlib** stream headeriga mos keladi.
 Shuning uchun:
 - XOR natijasini `zlib.decompress()` qilamiz → flag chiqadi.
 
