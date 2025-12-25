@@ -108,7 +108,6 @@ go tool objdump -s 'main.\(\*R0\)\.Expected' rev_starshard_reassembly/memory_min
 ## 5) Flagni olish uchun `python` script
 
 ```bash
-cat > extract_flag.py << 'PY'
 import subprocess, re
 
 binpath = "rev_starshard_reassembly/memory_minder"
@@ -130,11 +129,11 @@ for i in range(28):  # R0..R27
         continue
 
 print("".join(out_chars))
-PY
-
-python3 extract_flag.py
 ```
+Uni `run` qilish
 
+```bash
+python3 your_file_name.py
 ---
 
 ## 6) Natija (Flag)
