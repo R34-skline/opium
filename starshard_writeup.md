@@ -130,8 +130,6 @@ for i in range(28):  # R0..R27
         out_chars.append(chr(int(m.group(1))))
         continue
 
-    raise SystemExit(f"R{i} uchun konstant topilmadi")
-
 print("".join(out_chars))
 PY
 
