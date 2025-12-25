@@ -11,8 +11,6 @@ Tavsif: Twillie Snowdrop, the village's Memory-Minder, has discovered that one o
 
 ## Solution
 
----
-
 ## 1) Fayllar va tayyorgarlik
 
 Arxiv ichidan faylni chiqaramiz:
