@@ -66,12 +66,9 @@ Shuning uchun:
 
 ---
 
-## Solve skript
-
-Quyidagini `solve.py` qilib saqlang ( `snownet_stronger.tflite` bilan bitta papkada):
+### 4) Endi flagni extract qilib bergani python script yozamiz 
 
 ```python
-#!/usr/bin/env python3
 import struct
 import zlib
 
@@ -83,17 +80,13 @@ def u32(off): return struct.unpack_from("<I", data, off)[0]
 def i32(off): return struct.unpack_from("<i", data, off)[0]
 def u16(off): return struct.unpack_from("<H", data, off)[0]
 
-# FlatBuffer root table offset
 root = u32(0)
 
-# Model vtable
 vt_off = i32(root)
 vt = root - vt_off
 vlen = u16(vt)
 field_offsets = [u16(vt + 4 + 2*i) for i in range((vlen - 4)//2)]
 
-# buffers vektorini topish:
-# (bu challenge’da uzunligi 9 bo‘lgan vektor chiqadi; root field’larni skan qilib topamiz)
 buffers_vec = None
 for fo in field_offsets:
     if fo == 0:
@@ -109,7 +102,6 @@ for fo in field_offsets:
 if buffers_vec is None:
     raise RuntimeError("buffers vector topilmadi")
 
-# Har bir Buffer table’dan Buffer.data (ubyte vector) ni sug‘urib olish
 blobs = []
 ln = u32(buffers_vec)
 
@@ -117,12 +109,10 @@ for i in range(ln):
     ep = buffers_vec + 4 + 4*i
     table = ep + u32(ep)
 
-    # Buffer table vtable
     b_vt_off = i32(table)
     b_vt = table - b_vt_off
     b_vlen = u16(b_vt)
 
-    # Buffer’da 1 ta field bor: data
     data_field_off = u16(b_vt + 4) if b_vlen >= 6 else 0
     if data_field_off == 0:
         blobs.append(b"")
@@ -134,14 +124,11 @@ for i in range(ln):
     blob = data[vec + 4 : vec + 4 + blen]
     blobs.append(blob)
 
-# 16 baytli UTF-16LE-ga o‘xshash: "k@3@y@!@" -> kalit = "k3y!"
 key_blob = next(b for b in blobs if len(b) == 16 and b and b[1::2] == b"\x00"*8)
 key = key_blob[0::2].replace(b"@", b"")  # b'k3y!'
 
-# 36 baytli ciphertext
 cipher = next(b for b in blobs if len(b) == 36)
 
-# XOR -> zlib -> flag
 xored = bytes(cipher[i] ^ key[i % len(key)] for i in range(len(cipher)))
 flag = zlib.decompress(xored).decode()
 
