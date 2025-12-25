@@ -106,7 +106,7 @@ go tool objdump -s 'main.\(\*R0\)\.Expected' rev_starshard_reassembly/memory_min
 
 ---
 
-## 5) Flag’ni avtomatik yig‘ish (Python script)
+## 5) Flagni olish uchun python script
 
 ```bash
 cat > extract_flag.py << 'PY'
