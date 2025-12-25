@@ -41,7 +41,7 @@ strings -n 4 snownet_stronger.tflite | head -n 80
 
 ---
 
-### 3) Reverse mantiqi (nima bo‘layapti?)
+### 3) Bu taskni avval tushunib olish kerak
 
 `.tflite` fayl ichida (FlatBuffers tuzilmasida) **Buffers** degan ro‘yxat bo‘ladi. U yerda:
 
