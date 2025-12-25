@@ -51,13 +51,13 @@ Shu bilan binary **Golang** ekanini bilib oldik.
 
 ## 3) Symbollarni ko‘rish (`go tool nm`)
 
-Go toolchain Mach-O’ni o‘qiy oladi. Avval umumiy symbol’lar:
+Go toolchain Mach-O ni o‘qiy oladi. Avval umumiy symbollar:
 
 ```bash
 go tool nm rev_starshard_reassembly/memory_minder | head
 ```
 
-Keyin faqat `main.` bilan boshlanuvchi symbol’lar:
+Keyin faqat `main.` bilan boshlanuvchi symbollar:
 
 ```bash
 go tool nm rev_starshard_reassembly/memory_minder | grep -E " main\." | head -n 80
