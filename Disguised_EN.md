@@ -29,8 +29,7 @@ Remote:
    {"s": "<snow mark (hex)>", "i": <uid>}
    ```
 
-   `![server](/home/martian/Pictures/Screenshots/Screenshot_20251225_164528.png)
-   ```
+   ![server](/home/martian/Pictures/Screenshots/Screenshot_20251225_164528.png)
 
 2. **AES-like cipher with only 2 rounds**
 
@@ -46,10 +45,7 @@ Remote:
 
    I registered multiple users (e.g., 12) to collect several (uid, token) pairs. Since the JSON structure is known, the last plaintext block (including PKCS#7 padding) can be computed offline.
 
-   ```
    [![token](/home/martian/Pictures/Screenshots/Screenshot_20251225_170039.png)
-
-   ```
 
 4. **Recovering round keys column-by-column**
 
@@ -68,9 +64,7 @@ Remote:
 
    This recovers the two round keys (**rk0** and **rk1**).
 
-   ```
    ![recovering keys](/home/martian/Pictures/Screenshots/Screenshot_20251225_170155.png)
-   ```
 
 5. **Mapping round keys back to the master key**
 
@@ -87,8 +81,7 @@ Remote:
 
 6. **Forging the admin token**
 
-   Admin target:
-   - username: `TinselwickAdmin`
+   Admin target:   - username: `TinselwickAdmin`
    - uid: `0`
 
    Steps:
@@ -100,10 +93,8 @@ Remote:
      ```
 
    - Submit the forged token to the login endpoint.
-
-   ```
+     
    ![admin](/home/martian/Pictures/Screenshots/Screenshot_20251225_171446-1.png)
-   ```
 
 7. **Flag**
 
