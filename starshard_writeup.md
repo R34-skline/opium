@@ -1,8 +1,15 @@
-# Starshard Reassembly — `memory_minder` (rev) Write-up
+# Starshard Reassembly — Write-up
 
-> Platform: Kali Linux (x86_64)  
-> Challenge type: Reverse Engineering (Go binary, Mach-O)  
-> Goal: Flag’ni binary ichidan “bo‘laklab” yig‘ish
+ ## Challenge info
+
+```text
+Level: Easy
+Category: reverse
+
+Tavsif: Twillie Snowdrop, the village's Memory-Minder, has discovered that one of her enchanted snowglobes has gone cloudy , its Starshard missing and its memories scrambled. To restore the scene within, you must provide the correct sequence of "memory shards". The binary will accept your attempt and reveal whether the Starshard glows once more. Can you decipher the snowglobe’s secret and bring the memory back to life?
+```
+
+## Solution
 
 ---
 
