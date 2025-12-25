@@ -1,23 +1,17 @@
 # CloudyCore
 
-## Challenge Information
+ ## Challenge info
 
-- **Level:** Medium
-- **Category:** Reverse
-- **Description:**  
-  Twillie, the memory-minder, was rewinding one of her snowglobes when she overheard a villainous whisper. The scoundrel was boasting about hiding the Starshard's true memory inside this tiny memory core (.tflite). He was so overconfident, laughing that no one would ever think to reverse-engineer a 'boring' ML file. He said he 'left a little challenge for anyone who did,' scrambling the final piece with a simple XOR just for fun. Find the key, reverse the laughably simple XOR, and restore the memory.
+```text
+Level: medium
+Category: reverse
 
----
+Tavsif: Twillie, the memory-minder, was rewinding one of her snowglobes when she overheard a villainous whisper. The scoundrel was boasting about hiding the Starshard's true memory inside this tiny memory core (.tflite). He was so overconfident, laughing that no one would ever think to reverse-engineer a 'boring' ML file. He said he 'left a little challenge for anyone who did,' scrambling the final piece with a simple XOR just for fun. Find the key, reverse the laughably simple XOR, and restore the memory.
+```
 
-## Files
+## Solution
 
-- `rev_cloudy_core.zip`
-
----
-
-## Walkthrough
-
-### 1) Extract the zip
+### 1) Extract the zip and read the file
 
 ```bash
 unzip rev_cloudy_core.zip -d cloudycore
