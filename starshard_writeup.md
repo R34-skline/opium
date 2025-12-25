@@ -6,7 +6,7 @@
 
 ---
 
-## 0) Fayllar va tayyorgarlik
+## 1) Fayllar va tayyorgarlik
 
 Arxiv ichidan faylni chiqaramiz:
 
@@ -33,7 +33,7 @@ Bu degani: **macOS** uchun compiled binary. Linux’da uni bevosita run qilish s
 
 ---
 
-## 1) Binary Go ekanini aniqlash
+## 2) Binary Go ekanini aniqlash
 
 Go binarylarda ko‘pincha “Go build ID” kabi izlar bo‘ladi:
 
@@ -41,29 +41,7 @@ Go binarylarda ko‘pincha “Go build ID” kabi izlar bo‘ladi:
 strings -a rev_starshard_reassembly/memory_minder | grep -i "go build" | head
 ```
 
-Misol:
-
-- `Go build ID: "..."`
-- `Go buildinf:`
-
 Shu bilan binary **Golang** ekanini bilib oldik.
-
----
-
-## 2) `go` tool’larini o‘rnatish (agar yo‘q bo‘lsa)
-
-Agar `go: command not found` chiqsa:
-
-```bash
-sudo apt update
-sudo apt install golang-go
-```
-
-Tekshiruv:
-
-```bash
-go version
-```
 
 ---
 
@@ -91,7 +69,7 @@ Bu yerda juda qiziq pattern chiqadi:
 - `main.(*R27).Expected`
 - `main.(*R27).Match`
 
-**Xulosa:** Flag (yoki secret) **R0..R27** degan bo‘laklarga bo‘lingan, va har bir `Expected` funksiyasi **bitta qiymat (harf)** qaytarayotganga o‘xshaydi.
+**Xulosa:** Flag **R0..R27** degan bo‘laklarga bo‘lingan, va har bir `Expected` funksiyasi **bitta qiymat (harf)** qaytarayotganga o‘xshaydi.
 
 ---
 
