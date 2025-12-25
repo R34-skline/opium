@@ -133,7 +133,11 @@ print("".join(out_chars))
 Uni `run` qilish
 
 ```bash
+
 python3 your_file_name.py
+
+```
+
 ---
 
 ## 6) Natija (Flag)
