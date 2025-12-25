@@ -79,13 +79,13 @@ Bu yerda juda qiziq pattern chiqadi:
 
 ## 4) `Expected` funksiyalarini disassemble qilish (`go tool objdump`)
 
-Masalan, R0:
+Masalan: R0:
 
 ```bash
 go tool objdump -s 'main.\(\*R0\)\.Expected' rev_starshard_reassembly/memory_minder | head -n 60
 ```
 
-Menda shu joy muhim edi:
+Oradan shuni ko'rsak bo'ladi: 
 
 ```
 MOVL $0x48, AX
