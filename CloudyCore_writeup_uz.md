@@ -1,23 +1,17 @@
 # CloudyCore
 
-## Challenge ma'lumotlari
+ ## Challenge info
 
-- **Level:** Medium  
-- **Kategoriya:** Reverse  
-- **Tavsif:**  
-  Twillie, xotira-asrovchi, qor sharlaridan birini “orqaga qaytarayotgan” paytda yovuzona pichirlashni eshitib qoldi. Qaroqchi Starshard’ning haqiqiy xotirasini shu kichkina xotira yadrosi (.tflite) ichiga yashirganini maqtanib aytayotgan ekan. U shu qadar ishonchli ediki, hech kim “zerikarli” ML faylni reverse qilishni o‘ylamaydi, deb kulibdi. U “kimdir urinsa” deb oxirgi bo‘lakni juda sodda XOR bilan aralashtirib qo‘yganini ham aytgan. Kalitni toping, kulgili darajada sodda XOR’ni teskari qiling va xotirani tiklang.
+```text
+Level: medium
+Category: reverse
 
----
+Tavsif: Twillie, the memory-minder, was rewinding one of her snowglobes when she overheard a villainous whisper. The scoundrel was boasting about hiding the Starshard's true memory inside this tiny memory core (.tflite). He was so overconfident, laughing that no one would ever think to reverse-engineer a 'boring' ML file. He said he 'left a little challenge for anyone who did,' scrambling the final piece with a simple XOR just for fun. Find the key, reverse the laughably simple XOR, and restore the memory.
+```
 
-## Fayllar
+## Solution
 
-- `rev_cloudy_core.zip`
-
----
-
-## Yechim (step-by-step)
-
-### 1) ZIPni ochish
+### 1) ZIPni ochish va faylni o'qish
 
 ```bash
 unzip rev_cloudy_core.zip -d cloudycore
@@ -25,7 +19,7 @@ cd cloudycore
 ls -la
 ```
 
-Odatda ichidan TensorFlow Lite model fayli chiqadi:
+Ichidan TensorFlow Lite model fayli chiqadi:
 
 - `snownet_stronger.tflite`
 
