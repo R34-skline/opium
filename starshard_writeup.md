@@ -49,7 +49,7 @@ Shu bilan binary **Golang** ekanini bilib oldik.
 
 ---
 
-## 3) Symbol’larni ko‘rish (`go tool nm`)
+## 3) Symbollarni ko‘rish (`go tool nm`)
 
 Go toolchain Mach-O’ni o‘qiy oladi. Avval umumiy symbol’lar:
 
