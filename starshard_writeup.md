@@ -13,14 +13,13 @@ Tavsif: Twillie Snowdrop, the village's Memory-Minder, has discovered that one o
 
 ## 1) Fayllar va tayyorgarlik
 
-Arxiv ichidan faylni chiqaramiz:
+Fayl ichida nima borligini ko'ramiz:
 
 ```bash
-unzip rev_starshard_reassembly.zip
 ls -la rev_starshard_reassembly/
 ```
 
-Natija odatda shunaqa:
+Natija shunaqa chiqadi:
 
 - `memory_minder` — asosiy binary
 
@@ -30,7 +29,7 @@ Binary formatini tekshiramiz:
 file rev_starshard_reassembly/memory_minder
 ```
 
-Menda chiqdi:
+Natijada shu chiqadi:
 
 - `Mach-O 64-bit x86_64 executable, flags:<|DYLDLINK|PIE>`
 
@@ -40,7 +39,7 @@ Bu degani: **macOS** uchun compiled binary. Linux’da uni bevosita run qilish s
 
 ## 2) Binary Go ekanini aniqlash
 
-Go binarylarda ko‘pincha “Go build ID” kabi izlar bo‘ladi:
+Go binarylarda ko‘pincha “Go build ID” kabi yozuvlar bo‘ladi:
 
 ```bash
 strings -a rev_starshard_reassembly/memory_minder | grep -i "go build" | head
