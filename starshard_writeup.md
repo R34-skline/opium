@@ -95,7 +95,7 @@ MOVL $0x48, AX
 
 Demak:
 - Har bir `Expected` ichida `MOVL $0x.., AX` kabi **immediate constant** bor,
-- Biz shu constant’larni yig‘ib, flag’ni chiqaramiz.
+- Biz shu constantlarni yig‘ib, flagni chiqaramiz.
 
 Tez ko‘rish uchun grep:
 
