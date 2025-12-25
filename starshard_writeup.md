@@ -33,7 +33,7 @@ Natijada shu chiqadi:
 
 - `Mach-O 64-bit x86_64 executable, flags:<|DYLDLINK|PIE>`
 
-Bu degani: **macOS** uchun compiled binary. Linux’da uni bevosita run qilish shart emas — biz **statik tahlil** qilamiz.
+Bu degani: **macOS** uchun compiled binary. Linuxda uni bevosita run qilish shart emas — biz **statik tahlil** qilamiz.
 
 ---
 
