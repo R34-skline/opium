@@ -26,7 +26,7 @@ Bu yerda asosiy fayl:
 
 ## 21) WASM ichidan eksport qilingan funksiyalarni topish (qaysi funksiya “flag check” qiladi?)
 
-Men minimal WASM parser yozib, **Export section**ni o‘qidim va eksportlarni chiqardim:
+Endi minimal WASM parser yozib, **Export section**ni o‘qish va eksportlarni chiqarish kerak:
 
 ```bash
 python3 - << 'PY'
