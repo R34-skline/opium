@@ -148,9 +148,9 @@ Chiqqan 23 bayt — bu **shifrlangan/obfuscate qilingan** string baytlari.
 
 ## 4) `check_flag` ichidan “kalit”ni topish (TOCK)
 
-Men `check_flag` funksiyasi bytecode’ini tekshirib, unda `i32.const 0x4b434f54` konstantasi borligini topdim.
+Endi `check_flag` funksiyasi bytecode’ini tekshirib, unda `i32.const 0x4b434f54` konstantasi borligini topamiz.
 
-E’tibor: WASM little-endian store qilgani uchun bu qiymat ASCII’da **"TOCK"** bo‘lib chiqadi (`T O C K`).
+E’tibor berish kerak bo'lgan joyi shuki WASM little-endian store qilgani uchun bu qiymat ASCII’da **"TOCK"** bo‘lib chiqadi (`T O C K`).
 
 Quyidagi skript Code section’dan `check_flag` tanasini olib, `i32.const` konstantalar ichidan aynan `0x4b434f54`ni qidiradi:
 
@@ -218,13 +218,13 @@ for i in range(len(check_flag_body) - 1):
 PY
 ```
 
-Shu bilan **kalit = `TOCK`** ekanini aniqladim.
+Shu bilan **kalit = `TOCK`** ekanini aniqlanadi.
 
 ---
 
 ## 5) Flagni qayta tiklash (XOR)
 
-`check_flag` logikasi mazmunan shunday:
+`check_flag` logikasi  shunday:
 - data segmentdagi baytlar (`secret[i]`)
 - `"TOCK"` kalitini 4 bayt bo‘yicha aylantirib (`key[i % 4]`)
 - `flag[i] = secret[i] XOR key[i % 4]`
