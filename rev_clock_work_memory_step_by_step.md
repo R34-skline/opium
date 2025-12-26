@@ -226,7 +226,7 @@ Shu bilan **kalit = `TOCK`** ekanini aniqlanadi.
 
 `check_flag` logikasi  shunday:
 - data segmentdagi baytlar (`secret[i]`)
-- `"TOCK"` kalitini 4 bayt bo‘yicha aylantirib (`key[i % 4]`)
+- `"TOCK"` kalitini 4 bayt bo‘yicha aylantirish (`key[i % 4]`)
 - `flag[i] = secret[i] XOR key[i % 4]`
 
 Demak flagni olish uchun faqat XOR qilish yetarli.
