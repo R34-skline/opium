@@ -78,13 +78,13 @@ for e in exports:
 PY
 ```
 
-Natijada `check_flag` eksport qilinganini ko‘rdim — demak flagni tekshiradigan logika shu funksiya ichida.
+Natijada `check_flag` eksport qilingani ko'rinadi — demak flagni tekshiradigan logika shu funksiya ichida.
 
 ---
 
 ## 3) Data segmentni topish (WASM memoryga yozilgan yashirin baytlar)
 
-Keyingi qadam: WASM’ning **Data section (id=11)** ichidan aktiv data segmentni o‘qidim.
+Keyingi qadam: WASM’ning **Data section (id=11)** ichidan aktiv data segmentni o‘qish.
 
 Bu challengeda data segment **offset = 1024** ga yozilgan va uzunligi **23 bayt**.
 
