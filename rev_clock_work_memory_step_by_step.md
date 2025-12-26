@@ -1,10 +1,17 @@
-# rev_clock_work_memory — flagni olish bo‘yicha step-by-step (men qilgan yo‘l)
+# Clock Work Memory
 
-Quyida men **/mnt/data/rev_clock_work_memory.zip** ichidagi WASM fayldan flagni qanday topganimni bosqichma-bosqich yozdim. Bu HTB formatidagi (CTF) `rev` challenge yechimi.
+ ## Challenge info
 
----
+```text
+Level: very easy
+Category: reverse
 
-## 0) ZIP ichidagi fayllarni ko‘rish va chiqarib olish
+Tavsif: Twillie's "Clockwork Memory" pocketwatch is broken. The memory it holds, a precious story about the Starshard, has been distorted. By reverse-engineering the intricate "clockwork" mechanism of the `pocketwatch.wasm` file, you can discover the source of the distortion and apply the correct "peppermint" key to remember the truth.
+```
+
+## Solution
+
+### 1) ZIP ichidagi fayllarni ko‘rish va chiqarib olish
 
 ```bash
 unzip -l /mnt/data/rev_clock_work_memory.zip
