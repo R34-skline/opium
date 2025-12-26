@@ -24,22 +24,7 @@ Bu yerda asosiy fayl:
 
 ---
 
-## 1) Fayl WASM ekanini tekshirish
-
-WASM fayllar `00 61 73 6d` (`\0asm`) “magic” baytlari bilan boshlanadi:
-
-```bash
-python3 - << 'PY'
-from pathlib import Path
-p = Path("/mnt/data/rev_clock_work_memory/pocketwatch.wasm")
-b = p.read_bytes()[:8]
-print(b)  # b'\\x00asm\\x01\\x00\\x00\\x00' bo‘lishi kerak
-PY
-```
-
----
-
-## 2) WASM ichidan eksport qilingan funksiyalarni topish (qaysi funksiya “flag check” qiladi?)
+## 21) WASM ichidan eksport qilingan funksiyalarni topish (qaysi funksiya “flag check” qiladi?)
 
 Men minimal WASM parser yozib, **Export section**ni o‘qidim va eksportlarni chiqardim:
 
@@ -97,11 +82,11 @@ Natijada `check_flag` eksport qilinganini ko‘rdim — demak flagni tekshiradig
 
 ---
 
-## 3) Data segmentni topish (WASM memory’ga yozilgan yashirin baytlar)
+## 3) Data segmentni topish (WASM memoryga yozilgan yashirin baytlar)
 
 Keyingi qadam: WASM’ning **Data section (id=11)** ichidan aktiv data segmentni o‘qidim.
 
-Bu challenge’da data segment **offset = 1024** ga yozilgan va uzunligi **23 bayt**.
+Bu challengeda data segment **offset = 1024** ga yozilgan va uzunligi **23 bayt**.
 
 ```bash
 python3 - << 'PY'
@@ -240,7 +225,7 @@ Shu bilan **kalit = `TOCK`** ekanini aniqladim.
 ## 5) Flagni qayta tiklash (XOR)
 
 `check_flag` logikasi mazmunan shunday:
-- data segment’dagi baytlar (`secret[i]`)
+- data segmentdagi baytlar (`secret[i]`)
 - `"TOCK"` kalitini 4 bayt bo‘yicha aylantirib (`key[i % 4]`)
 - `flag[i] = secret[i] XOR key[i % 4]`
 
@@ -259,7 +244,7 @@ PY
 
 ## 6) Yakuniy natija
 
-Shu hisob-kitobdan flag chiqadi:
+Shu yo'l bilan flag chiqadi:
 
 ```
 HTB{w4sm_r3v_1s_c00l!!}
